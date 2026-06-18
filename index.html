@@ -157,14 +157,16 @@ h2 {
   border: 2px solid var(--ink);
   border-radius: 999px;
   background: var(--card);
-  padding: 8px 12px;
+  padding: 10px 16px;
   cursor: pointer;
+  transition: all .2s ease;
 }
 
 .project-thumbnails button:hover {
   background: var(--yellow);
+  transform: translateY(-2px);
 }
-
+  
 .project-thumbnails img {
   width: 150px;
   height: 90px;
@@ -347,13 +349,25 @@ footer {
     
     <article class="project-card">
       <div class="project-number">02</div>
-      <div class="project-image-wrap">
-        <img src="images/handmade-1.png" alt="Handmade Harmony project preview">
-          <img src="images/handmade-1.png" alt="Handmade Home Page">
-          <img src="images/handmade-2.png" alt="Handmade Product Listing">
-          <img src="images/handmade-3.png" alt="Handmade Product Details">
-        </div>
-      </div>
+<div class="project-gallery">
+  <div class="project-image-wrap">
+    <img id="handmade-main" src="images/handmade-1.png" alt="Handmade Harmony project preview">
+  </div>
+
+  <div class="project-thumbnails">
+    <button onclick="document.getElementById('handmade-main').src='images/handmade-1.png'">
+      Home
+    </button>
+
+    <button onclick="document.getElementById('handmade-main').src='images/handmade-2.png'">
+      Products
+    </button>
+
+    <button onclick="document.getElementById('handmade-main').src='images/handmade-3.png'">
+      Details
+    </button>
+  </div>
+</div>
       <div class="project-content">
         <h3>Handmade Harmony</h3>
         <p class="tagline">Designing an e-commerce experience for handmade pottery products.</p>
@@ -379,12 +393,25 @@ footer {
     
     <article class="project-card">
       <div class="project-number">03</div>
-      <div class="project-image-wrap">
-        <img src="images/blissed-1.png" alt="Blissed Heaven project preview">
-          <img src="images/blissed-1.png" alt="Blissed Home Page">
-          <img src="images/blissed-2.png" alt="Blissed Menu Page">
-          <img src="images/blissed-3.png" alt="Blissed Checkout Page">
-        </div>
+      <div class="project-gallery">
+  <div class="project-image-wrap">
+    <img id="blissed-main" src="images/blissed-1.png" alt="Blissed Heaven project preview">
+  </div>
+
+  <div class="project-thumbnails">
+    <button onclick="document.getElementById('blissed-main').src='images/blissed-1.png'">
+      Home
+    </button>
+
+    <button onclick="document.getElementById('blissed-main').src='images/blissed-2.png'">
+      Menu
+    </button>
+
+    <button onclick="document.getElementById('blissed-main').src='images/blissed-3.png'">
+      Checkout
+    </button>
+  </div>
+</div>
       <div class="project-content">
         <h3>Blissed Heaven</h3>
         <p class="tagline">Improving the online ordering experience for a restaurant website.</p>
