@@ -133,13 +133,36 @@ h2 {
   object-fit:contain;
   border-radius:10px;
 }
+.project-gallery {
+  display: block;
+  background: #F3EFE5;
+  border-bottom: 3px solid var(--ink);
+}
+
+.project-gallery .project-image-wrap {
+  border-bottom: none;
+}
+
 .project-thumbnails {
   display: flex;
-  gap: 12px;
-  padding: 16px 22px 22px;
-  background: #F3EFE5;
-  border-top: 2px solid var(--line);
-  overflow-x: auto;
+  gap: 10px;
+  padding: 0 22px 22px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-thumbnails button {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--card);
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.project-thumbnails button:hover {
+  background: var(--yellow);
 }
 
 .project-thumbnails img {
@@ -289,14 +312,16 @@ footer {
     
     <article class="project-card">
       <div class="project-number">01</div>
-      <div class="project-image-wrap">
-        <img src="images/darb-1.png" alt="Darb LMS project preview">
-        <div class="project-thumbnails">
-          <img src="images/darb-1.png" alt="Darb Landing Page">
-          <img src="images/darb-2.png" alt="Darb Dashboard">
-          <img src="images/darb-3.png" alt="Darb Course Details">
-        </div>
-      </div>
+<div class="project-gallery">
+  <div class="project-image-wrap">
+    <img id="darb-main" src="images/darb-1.png" alt="Darb LMS project preview">
+  </div>
+  <div class="project-thumbnails">
+    <button onclick="document.getElementById('darb-main').src='images/darb-1.png'">Landing</button>
+    <button onclick="document.getElementById('darb-main').src='images/darb-2.png'">Dashboard</button>
+    <button onclick="document.getElementById('darb-main').src='images/darb-3.png'">Course</button>
+  </div>
+</div>
       <div class="project-content">
         <h3>Darb LMS</h3>
         <p class="tagline">Designing a Learning Management System for course enrollment, learning management, and collaboration.</p>
@@ -324,7 +349,6 @@ footer {
       <div class="project-number">02</div>
       <div class="project-image-wrap">
         <img src="images/handmade-1.png" alt="Handmade Harmony project preview">
-        <div class="project-thumbnails">
           <img src="images/handmade-1.png" alt="Handmade Home Page">
           <img src="images/handmade-2.png" alt="Handmade Product Listing">
           <img src="images/handmade-3.png" alt="Handmade Product Details">
@@ -357,12 +381,10 @@ footer {
       <div class="project-number">03</div>
       <div class="project-image-wrap">
         <img src="images/blissed-1.png" alt="Blissed Heaven project preview">
-        <div class="project-thumbnails">
           <img src="images/blissed-1.png" alt="Blissed Home Page">
           <img src="images/blissed-2.png" alt="Blissed Menu Page">
           <img src="images/blissed-3.png" alt="Blissed Checkout Page">
         </div>
-      </div>
       <div class="project-content">
         <h3>Blissed Heaven</h3>
         <p class="tagline">Improving the online ordering experience for a restaurant website.</p>
