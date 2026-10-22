@@ -424,14 +424,38 @@ footer {
   }
   .contact { padding:26px; }
 }
+  .role-badge {
+  display:inline-flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  width:fit-content;
+  margin:0 0 16px;
+  padding:8px 12px;
+  background:var(--yellow);
+  border:2px solid var(--ink);
+  border-radius:6px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  line-height:1.5;
+}
+
+.role-badge strong {
+  font-size:10px;
+  letter-spacing:.08em;
+}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="topline">UI/UX Designer</div>
+    <div class="topline">UI/UX Designer · Team Lead</div>
     <h1>Noorah Ashmeel</h1>
-    <p class="hero-text">UI/UX Designer specializing in user-centered digital experiences, UX research, wireframing, prototyping, and AI-assisted design.</p>
+    <p class="hero-text">
+  UI/UX Designer and Team Lead focused on creating user-centered digital experiences,
+  from UX research and user flows to high-fidelity interfaces and design systems.
+  Currently serving as Deputy Technical Committee Leader at Nytech, leading the UI/UX team
+  and coordinating design work across the platform.</p>
     <div class="meta">
       <span>📍 Dhahran, Saudi Arabia</span>
       <a href="mailto:nourashmeel@gmail.com">✉ nourashmeel@gmail.com</a>
@@ -543,6 +567,10 @@ footer {
 
         <div>
           <h3>Nytech LMS Platform</h3>
+          <div class="role-badge">
+  <strong>MY ROLE</strong>
+  Deputy Technical Committee Leader · UI/UX Team Lead
+</div>
           <p>
             Designing and evolving a multi-role learning management platform,
             including trainee learning experiences, assignments and projects,
